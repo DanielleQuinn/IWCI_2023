@@ -3,6 +3,7 @@
 #### marked and unmarked fish you caught and
 #### calculate a population estimate for the whole pond
 output$population_estimate <- renderInfoBox(
-  infoBox(title = "Smallest Female",
+  infoBox(title = "Estimated Population Size",
           value = (input$number_caught * input$total_marks_in_pond) / input$number_marked))
+
 #### END CODE <---
