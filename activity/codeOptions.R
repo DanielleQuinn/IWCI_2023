@@ -46,7 +46,7 @@ output$plot_length <- renderPlot(
 
 # CODE OPTION 11 ---------------------------------------- #
 output$population_estimate <- renderInfoBox(
-  infoBox(title = "Smallest Female",
+  infoBox(title = "Estimated Population Size",
           value = (input$number_caught * input$total_marks_in_pond) / input$number_marked))
 
 # CODE OPTION 12 ---------------------------------------- #
@@ -103,3 +103,4 @@ output$largest_female_fish <- renderInfoBox(
           value = d %>%
             filter(Species == input$species, Sex == "f") %>%
             pull(Length) %>% max()))
+
